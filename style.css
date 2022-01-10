@@ -8,16 +8,9 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-}
 
-body {
-  margin: 0px;
-  font-family: 'segoe ui';
-}
 
- /* ---------------- CUT NAV -----------------*/
+/* ---------------- CUT NAV -----------------*/
 .nav {
   height: 50px;
   width: 100%;
@@ -60,6 +53,74 @@ body {
 .nav > #nav-check {
   display: none;
 }
+
+@media (max-width: 768px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+
+  /* ---------------- CUT NAV -----------------*/
+
+  .nature {
+    padding: 0;
+  }
+
+  .nu-container {
+    max-width: 240px !important;
+  }
+ 
+
+  .container:first-child{
+    display: none;
+  }
+  .slideshow-container{
+    display: none;
+  }
+  .content:hover{
+    opacity: none;
+  }
+}
+
 
 
 
@@ -180,6 +241,13 @@ body {
   }
 }
 
+
+
+@media (max-width: 780px) {
+ 
+
+}
+
 .container:nth-child(2) {
   max-width: 1200px;
   width: 100%;
@@ -199,31 +267,6 @@ body {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 0 80px;
-}
-
-.line-center {
-  margin: 0;
-  padding: 0 45px;
-  background: #fff;
-  display: inline-block;
-}
-h2 {
-  padding: 30px 0;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-  font-size: 42px;
-}
-
-h2:after {
-  content: "";
-  /* position:absolute; */
-  top: 50%;
-  left: 0;
-  right: 0;
-  border-top: solid 1px red;
-  z-index: -1;
 }
 
 .nu-container {
@@ -247,11 +290,12 @@ h2:after {
   left: 0px;
   top: 244px;
   padding: 5px 10px;
-}
-
-.inactive {
   opacity: 0.5;
 }
+.content:hover {
+  opacity: 1;
+}
+
 .content p:first-child {
   font-size: 17px;
 }
@@ -267,9 +311,7 @@ h2:after {
   background: #fff url(img/nature-3.png) center center/cover no-repeat;
 }
 
-.content:hover {
-  opacity: 1;
-}
+
 
 .container:nth-child(3) {
   max-width: 1200px;
@@ -287,14 +329,13 @@ h2:after {
   height: 505px;
   background-color: #1a1a1a;
   background: #fff url(img/about.png) center center/cover no-repeat;
-  padding-top:37px ;
+  padding-top: 37px;
 }
 
 .about .about-title {
   text-align: center;
   color: #fff;
   font-size: 18px;
- 
 }
 
 .about .sub-title {
@@ -317,7 +358,6 @@ h2:after {
   margin: 0 84px 27px;
   font-size: 16px;
 }
-
 
 .container:nth-child(4) {
   max-width: 1200px;
@@ -362,9 +402,9 @@ h2:after {
 }
 
 .social-container .social-icon p {
-  margin-top:5px ;
+  margin-top: 5px;
   font-size: 12px;
-  color:#f7f7f7;
+  color: #f7f7f7;
 }
 
 .email-tel {
@@ -379,10 +419,9 @@ h2:after {
   color: #f7f7f7;
 }
 
-.email-tel p:first-child{
+.email-tel p:first-child {
   margin-top: 30px;
 }
-
 
 .container:nth-child(5) {
   max-width: 1200px;
@@ -398,48 +437,3 @@ h2:after {
   text-align: center;
   margin-top: 16px;
 }
-@media (max-width:768px) {
-  .nav > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-  }
-  .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-  }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-  .nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-  }
-  .nav > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #333;
-    height: 0px;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px;
-  }
-  .nav > .nav-links > a {
-    display: block;
-    width: 100%;
-  }
-  .nav > #nav-check:not(:checked) ~ .nav-links {
-    height: 0px;
-  }
-  .nav > #nav-check:checked ~ .nav-links {
-    height: calc(100vh - 50px);
-    overflow-y: auto;
-  }
-}
- /* ---------------- CUT NAV -----------------*/
